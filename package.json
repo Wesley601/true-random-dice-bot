@@ -6,7 +6,13 @@
   "dependencies": {
     "axios": "^0.19.2",
     "discord.js": "^12.2.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+  },
+  "scripts": {
+    "dev": "sucrase-node src/server.ts",
+    "build": "sucrase ./src -d ./dist --transforms typescript,imports"
+  },
+  "devDependencies": {
+    "sucrase": "^3.13.0",
+    "typescript": "^3.8.3"
   }
 }

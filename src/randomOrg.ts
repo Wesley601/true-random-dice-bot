@@ -2,8 +2,9 @@ import axios, { AxiosPromise } from 'axios';
 import { random_url, random_key } from '../config.json';
 
 
-class RandomClient {
-    public static client (numberOfDices: string, max: string, min = "1"): AxiosPromise 
+class RandomClient 
+{
+    public static client (numberOfDices: number, max: number, min = "1"): AxiosPromise 
     {
         return axios({
             method: 'post',
